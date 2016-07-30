@@ -1,0 +1,22 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+build:
+	$(MAKE) -f Makefile
+
+build-arch: build
+
+build-indep: build
+
+binary: 
+
+override_dh_installdeb:
+
+override_dh_auto_clean:
+	$(MAKE) -f Makefile clean
+
+#override_dh_usrlocal:
+
+#override_dh_shlibdeps:

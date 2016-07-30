@@ -1,0 +1,45 @@
+Source: libssllabs
+Maintainer: Matus Bursa <burso@burso.eu>
+Section: misc
+Priority: optional
+Standards-Version: 0.1.0
+Build-Depends: debhelper (>= 9)
+
+Package: libssllabs-dev
+Architecture: any
+Description: c++ development headers
+ ssllabs analyzes quality of ssl configuration
+ on defined host. libssllabs is easiest way to
+ use ssllabs in c++ code.
+
+Package: libssllabs
+Architecture: amd64
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: c++ library to work with ssllabs
+ ssllabs analyzes quality of ssl configuration 
+ on defined host. libssllabs is easiest way to
+ use ssllabs in c++ code.
+
+Package: libssllabs
+Architecture: i386
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: c++ library to work with ssllabs
+ ssllabs analyzes quality of ssl configuration
+ on defined host. libssllabs is easiest way to
+ use ssllabs in c++ code.
+
+Package: python3-ssllabs
+Architecture: amd64
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: python library to work with ssllabs
+ ssllabs analyzes quality of ssl configuration
+ on defined host. libssllabs is easiest way to
+ use ssllabs in c++ code.
+
+Package: python3-ssllabs
+Architecture: i386
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: python library to work with ssllabs
+ ssllabs analyzes quality of ssl configuration
+ on defined host. libssllabs is easiest way to
+ use ssllabs in c++ code.
