@@ -5,13 +5,14 @@
 #ifndef LIBSSLLABS_SSLLABS_H
 #define LIBSSLLABS_SSLLABS_H
 
-const char SSLLABS_API_URL[] = "https://api.ssllabs.com/api/v2";
-const char SSLLABS_AGENT[] = "libssllabs/1.0";
-
 #include <vector>
 #include <map>
 #include <string>
 #include <stdint.h>
+#include <curl/curl.h>
+
+const char SSLLABS_API_URL[] = "https://api.ssllabs.com/api/v2";
+const char SSLLABS_AGENT[] = "libssllabs/1.0";
 
 namespace ssllabs {
 
@@ -269,6 +270,7 @@ namespace ssllabs {
         int curl_read(const std::string &command, const std::string &data);
 
     private:
+        void verifyCurlStatus(CURLcode code);
     };
 
 }
